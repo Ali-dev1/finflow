@@ -1,7 +1,21 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "ESNext", // Compile to modern JavaScript
+    "useDefineForClassFields": true, // Enable class fields
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // Include DOM and ESNext APIs
+    "allowJs": false, // Disallow JavaScript files
+    "skipLibCheck": true, // Skip library type checking
+    "esModuleInterop": false, // Disable default import interop
+    "allowSyntheticDefaultImports": true, // Allow default imports
+    "strict": true, // Enable strict type checking
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file naming
+    "module": "ESNext", // Use ES modules
+    "moduleResolution": "Node", // Node.js module resolution
+    "resolveJsonModule": true, // Allow JSON imports
+    "isolatedModules": true, // Ensure isolated modules for Vite
+    "noEmit": true, // Don’t emit output (handled by Vite)
+    "jsx": "react-jsx" // Use React JSX
+  },
+  "include": ["src"], // Include source files
+  "references": [{ "path": "./tsconfig.node.json" }] // Reference node config
 }
